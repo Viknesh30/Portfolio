@@ -1,0 +1,13 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio website",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "tailwindcss": "^2.0.3"
+  }
+}

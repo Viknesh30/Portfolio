@@ -1,0 +1,136 @@
+/* Reset some default styles */
+html, body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS for section headings */
+.section-heading {
+    margin-bottom: 20px; /* Add margin at the bottom of each section heading */
+}
+
+/* CSS for section paragraphs */
+.section-content {
+    margin-bottom: 30px; /* Add margin at the bottom of each section content */
+}
+
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('Images/Network.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.animate__animated.animate__fadeIn {
+    animation-duration: 1s; /* Customize animation duration */
+    animation-delay: 0.5s; /* Customize animation delay */
+}
+
+/* CSS for section headings */
+.section-heading {
+    margin-bottom: 20px; /* Add margin at the bottom of each section heading */
+}
+
+/* CSS for section paragraphs */
+.section-content {
+    margin-bottom: 30px; /* Add margin at the bottom of each section content */
+}
+
+/* Header styles */
+header {
+    background-color: #01167d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #082097; /* Change to your desired hover color */
+}
+
+/* About section styles */
+#about {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* Footer styles */
+footer {
+    background-color: #082097;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Social media icon styles */
+a.twitter-link,
+a.facebook-link,
+span.email-icon {
+    display: inline-block;
+    margin-right: 20px;
+    color: #01167d; /* Change to your desired icon color */
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* ... Your previous styles ... */
+
+/* Center the description text */
+section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 80%; /* Limit the width to prevent it from extending */
+}
+
+/* ... Your previous styles ... */
