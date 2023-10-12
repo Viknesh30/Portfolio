@@ -3,85 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Viknesh Subramaniam</title>
     <!-- Set logo.svg as the favicon -->
     <link rel="icon" type="image/svg+xml" href="Images/LOGO.svg">
     <!-- Add your CSS and JavaScript links here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-    <link rel="stylesheet" type="text/css" href="Css/style.css">
-    
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-
-    <!-- Internal CSS for Certifications -->
-    <style>
-        /* Style the certifications section */
-        #certifications {
-            margin: 20px;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-
-        /* Style the certification list */
-        .certification-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        /* Style individual certification items */
-        .certification-item {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            display: flex;
-            align-items: center; /* Center-align badge and description vertically */
-        }
-
-        .certification-item img {
-            max-width: 100px; /* Adjust the max-width of the badge as needed */
-            height: auto;
-            margin-right: 10px; /* Add some spacing between badge and description */
-        }
-
-        .certification-item h3 {
-            margin-bottom: 5px;
-        }
-
-        .certification-item p {
-            text-align: left; /* Align description text to the left */
-        }
-
-        .certification-item ul {
-            padding-left: 20px;
-        }
-
-        .certification-item ul li {
-            margin-bottom: 5px;
-        }
-    </style>
 </head>
 <body class="bg-gray-100">
-       <!-- Header -->
-    <header class="bg-blue-900 text-white text-center py-2 animate__animated animate__fadeIn">
-        <h1 class="text-3xl font-extrabold">Viknesh Subramaniam</h1>
-        <p class="text-sm">Fresh Graduate | Bachelor of Computer Science (Network Engineering) | Student at Universiti Malaysia Sabah</p>
-    </header>
-
-    <!-- Navigation bar -->
-    <nav class="animate__animated animate__fadeIn bg-gray-400 text-white py-3">
-        <div class="container mx-auto">
-            <ul class="flex justify-center">
-                <li class="mx-4"><a href="index.html" class="hover:text-blue-500">About Me</a></li>
-                <li class="mx-4"><a href="projects.html" class="hover:text-blue-500">Projects</a></li>
-                <li class="mx-4"><a href="certificate.html" class="hover:text-blue-500">Certifications</a></li>
-                <li class="mx-4"><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-            </ul>
+    <header class="bg-yellow-600 py-4 flex items-center justify-center">
+        <div class="container mx-auto text-center">
+            <img src="Images/personal-information.png" alt="Flaticon Icon" class="w-12 h-12 inline-block align-middle">
+            <h1 class="inline-block align-middle text-3xl font-bold ml-2 text-white">Fresh Graduate | Bachelor of Computer Science (Network Engineering) | Student at Universiti Malaysia Sabah</h1>
         </div>
-    </nav>
+    </header>
+</body>
 
-    
+<nav class="animate__animated animate__fadeIn bg-emerald-800 text-black py-3">
+    <div class="container mx-auto">
+        <ul class="flex justify-center">
+            <li class="mx-4"><a href="index.html" class="hover:text-blue-500 font-bold">About Me</a></li>
+            <li class="mx-4"><a href="projects.html" class="hover:text-blue-500 font-bold">Projects</a></li>
+            <li class="mx-4"><a href="certificate.html" class="hover:text-blue-500 font-bold">Certifications</a></li>
+            <li class="mx-4"><a href="contact.html" class="hover:text-blue-500 font-bold">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
     <!-- About section -->
     <section id="about" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
         <div class="md:flex md:justify-between md:items-center text-center md:text-left">
@@ -104,62 +57,219 @@
             </div>
         </div>
     </section>
-    
+
+
     <!-- Technical Skills section -->
     <section id="technical-skills" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
         <h2 class="text-2xl font-bold text-indigo-600">Technical Skills</h2>
         <ul class="list-disc list-inside mt-4">
-            <li>Docker</li>
-            <li>Routing & Switching</li>
-            <li>Packet Tracer</li>
-            <li>Cloud computing concepts</li>
-            <li>Network Topologies</li>
-            <li>HTML, CSS & JavaScript</li>
-            <li>Java</li>
-            <li>C++</li>
-            <li>PHP</li>
-            <li>SQL</li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/docker.png" alt="Docker" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">Docker</h3>
+                    <p class="text-gray-600">3/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">50%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/network.png" alt="Routing & Switching" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">Routing & Switching</h3>
+                    <p class="text-gray-600">4/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">90%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-80 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/cisco.png" alt="Packet Tracer" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">Packet Tracer</h3>
+                    <p class="text-gray-600">4/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">90%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-80 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/server.png" alt="Cloud computing concepts" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">Cloud computing concepts</h3>
+                    <p class="text-gray-600">4/5</p>
+                </div>
+                <div class= "progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">80%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-80 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/cisco.png" alt="Network Topologies" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">Network Topologies</h3>
+                    <p class="text-gray-600">5/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">100%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-100 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/file.png" alt="HTML, CSS & JavaScript" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">HTML, CSS & JavaScript</h3>
+                    <p class="text-gray-600">4/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">90%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-80 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/java.png" alt="Java" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">Java</h3>
+                    <p class="text-gray-600">4/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">80%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-80 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/c-.png" alt="C++" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">C++</h3>
+                    <p class="text-gray-600">3/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">50%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/php-code.png" alt="PHP" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">PHP</h3>
+                    <p class="text-gray-600">4/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">80%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-80 ml-2"></div>
+                </div>
+            </li>
+            <li class="certification-item flex items-center mb-4">
+                <img src="Images/sql-server.png" alt="SQL" class="max-w-10 h-12 mr-4">
+                <div>
+                    <h3 class="text-lg font-bold">SQL</h3>
+                    <p class="text-gray-600">3/5</p>
+                </div>
+                <div class="progress-bar flex items-center ml-4">
+                    <span class="progress-bar-text font-bold">60%</span>
+                    <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+                </div>
+            </li>
         </ul>
     </section>
     
-    <!-- Soft Skills section -->
-    <section id="soft-skills" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
-        <h2 class="text-2xl font-bold text-indigo-600">Soft Skills</h2>
-        <ul class="list-disc list-inside mt-4">
-            <li>Decision making</li>
-            <li>Communication</li>
-            <li>Multi-tasking</li>
-            <li>Technical Writing</li>
-            <li>Project Management</li>
-            <li>Leadership</li>
-        </ul>
-    </section>
+<!-- Soft Skills section -->
+<section id="soft-skills" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
+    <h2 class="text-2xl font-bold text-indigo-600">Soft Skills</h2>
+    <ul class="list-disc list-inside mt-4">
+        <li class="certification-item flex items-center mb-4">
+            <img src="Images/right-decision.gif" alt="Decision Making" class="max-w-10 h-12 mr-4">
+            <div>
+                <h3 class="text-lg font-bold">Decision Making</h3>
+                <p class="text-gray-600">5/5</p>
+            </div>
+            <div class="progress-bar flex items-center ml-4">
+                <span class="progress-bar-text font-bold">90%</span>
+                <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+            </div>
+       
+        </li>
+        <li class="certification-item flex items-center mb-4">
+            <img src="Images/chat.gif" alt="Communication" class="max-w-10 h-12 mr-4">
+            <div>
+                <h3 class="text-lg font-bold">Communication</h3>
+                <p class="text-gray-600">5/5</p>
+            </div>
+            <div class="progress-bar flex items-center ml-4">
+                <span class="progress-bar-text font-bold">100%</span>
+                <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+            </div>
+        </li>
+        <li class="certification-item flex items-center mb-4">
+            <img src="Images/secretary.png" alt="Multi-Tasking" class="max-w-10 h-12 mr-4">
+            <div>
+                <h3 class="text-lg font-bold">Multi-Tasking</h3>
+                <p class="text-gray-600">5/5</p>
+            </div>
+            <div class="progress-bar flex items-center ml-4">
+                <span class="progress-bar-text font-bold">90%</span>
+                <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+            </div>
+        </li>
+        <li class="certification-item flex items-center mb-4">
+            <img src="Images/writing.png" alt="Technical Writing" class="max-w-10 h-12 mr-4">
+            <div>
+                <h3 class="text-lg font-bold">Technical Writing</h3>
+                <p class="text-gray-600">5/5</p>
+            </div>
+            <div class="progress-bar flex items-center ml-4">
+                <span class="progress-bar-text font-bold">70%</span>
+                <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+            </div>
+        </li>
+        <li class="certification-item flex items-center mb-4">
+            <img src="Images/clipboard.png" alt="Project Management" class="max-w-10 h-12 mr-4">
+            <div>
+                <h3 class="text-lg font-bold">Project Management</h3>
+                <p class="text-gray-600">5/5</p>
+            </div>
+            <div class="progress-bar flex items-center ml-4">
+                <span class="progress-bar-text font-bold">80%</span>
+                <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+            </div>
+        </li>
+        <li class="certification-item flex items-center mb-4">
+            <img src="Images/leadership.png" alt="Leadership" class="max-w-10 h-12 mr-4">
+            <div>
+                <h3 class="text-lg font-bold">Leadership</h3>
+                <p class="text-gray-600">5/5</p>
+            </div>
+            <div class="progress-bar flex items-center ml-4">
+                <span class="progress-bar-text font-bold">60%</span>
+                <div class="progress-bar-fill h-2 bg-blue-500 w-60 ml-2"></div>
+            </div>
+        </li>
+    </ul>
+</section>
 
-<!-- Footer -->
-<footer class="bg-indigo-600 text-white max-w-5xl mx-auto px-6 py-8 rounded-lg animate__animated animate__fadeIn flex flex-col items-center justify-center">
-    <p class="text-gray-100">&copy; 2023 Viknesh Subramaniam</p>
-    <p class="text-gray-100">Contact: 1305gviknesh@gmail.com</p>
-</footer>
 
+    <!-- Footer -->
+    <footer class="bg-indigo-600 text-white max-w-5xl mx-auto px-6 py-8 rounded-lg animate__animated animate__fadeIn flex flex-col items-center justify-center">
+        <p class="text-gray-100">&copy; 2023 Viknesh Subramaniam</p>
+        <p class="text-gray-100">Contact: <a href="mailto:1305gviknesh@gmail.com" class="underline">1305gviknesh@gmail.com</a></p>
+    </footer>
 
     <!-- Your JavaScript files can be included here -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // DOM is ready
-
-        // Your JavaScript code can go here
-        const email = '1305gviknesh@gmail.com'; // You can replace this with your email
-
-        // Select the element with the ID 'email-link'
-        const emailLink = document.querySelector('#email-link');
-
-        // Set the 'href' attribute of the email link to create a mailto link
-        emailLink.href = 'mailto:' + email;
-
-        // Output a message to the console
-        console.log('JavaScript is loaded and executed.');
-    });
-</script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // DOM is ready
+            // Your JavaScript code can go here
+            const email = '1305gviknesh@gmail.com'; // You can replace this with your email
+            // Select the element with the ID 'email-link'
+            const emailLink = document.querySelector('#email-link');
+            // Set the 'href' attribute of the email link to create a mailto link
+            emailLink.href = 'mailto:' + email;
+            // Output a message to the console
+            console.log('JavaScript is loaded and executed.');
+        });
+    </script>
 </body>
 </html>
