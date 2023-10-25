@@ -55,27 +55,37 @@
       const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  document.addEventListener("DOMContentLoaded", async function() {
-      const email = '1305gviknesh@gmail.com';
-      const emailLink = document.querySelector('#email-link');
-      emailLink.href = 'mailto:' + email;
+ document.addEventListener("DOMContentLoaded", function() {
+    // Test for email link
+    const emailLink = document.querySelector('#email-link');
+    if (!emailLink) {
+        console.error('Element with id "email-link" not found.');
+        return; // Exit the function early
+    }
+    
+    const email = '1305gviknesh@gmail.com';
+    emailLink.href = 'mailto:' + email;
 
-      const counterElement = document.getElementById("viewCounter");
-      
-      const counterDoc = doc(db, "views", "counter");
-      const docSnap = await getDoc(counterDoc);
-      if (docSnap.exists()) {
-          const currentCount = docSnap.data().count;
-          counterElement.textContent = `Views: ${currentCount}`;
-      }
+    // Test for view counter element
+    const counterElement = document.getElementById("viewCounter");
+    if (!counterElement) {
+        console.error('Element with id "viewCounter" not found.');
+        return; // Exit the function early
+    }
 
-      await updateDoc(counterDoc, {
-          count: increment(1)
-      });
+    db.collection("views").doc("counter").get().then((doc) => {
+        if (doc.exists) {
+            const currentCount = doc.data().count;
+            counterElement.textContent = `Views: ${currentCount}`;
+        }
+    });
 
-      console.log('JavaScript is loaded and executed.');
-  });
-</script>
+    db.collection("views").doc("counter").update({
+        count: firebase.firestore.FieldValue.increment(1)
+    });
+
+    console.log('JavaScript is loaded and executed.');
+});
 
     <!-- About section -->
     <section id="about" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
