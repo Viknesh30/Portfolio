@@ -33,59 +33,6 @@
     </div>
 </nav>
 
- <!-- Firebase Libraries -->
-<script type="module">
-  // Import required classes from Firebase
-  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js';
-  import { getFirestore, collection, doc, getDoc, updateDoc, increment } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js';
-
- <!-- Firebase Initialization and Document Listener -->
- <script>
-     // Firebase configuration
-     const firebaseConfig = {
-         apiKey: "AIzaSyD4RalC07pm6m3vKlYr7d1XLeTaiv1BkJs",
-         authDomain: "portfolio-fc68d.firebaseapp.com",
-         projectId: "portfolio-fc68d",
-         storageBucket: "portfolio-fc68d.appspot.com",
-         messagingSenderId: "1050247214709",
-         appId: "1:1050247214709:web:96fc4bd730c3a8aabcea3c",
-         measurementId: "G-L74P4RRXRH"
-     };
-
-      const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
- document.addEventListener("DOMContentLoaded", function() {
-    // Test for email link
-    const emailLink = document.querySelector('#email-link');
-    if (!emailLink) {
-        console.error('Element with id "email-link" not found.');
-        return; // Exit the function early
-    }
-    
-    const email = '1305gviknesh@gmail.com';
-    emailLink.href = 'mailto:' + email;
-
-    // Test for view counter element
-    const counterElement = document.getElementById("viewCounter");
-    if (!counterElement) {
-        console.error('Element with id "viewCounter" not found.');
-        return; // Exit the function early
-    }
-
-    db.collection("views").doc("counter").get().then((doc) => {
-        if (doc.exists) {
-            const currentCount = doc.data().count;
-            counterElement.textContent = `Views: ${currentCount}`;
-        }
-    });
-
-    db.collection("views").doc("counter").update({
-        count: firebase.firestore.FieldValue.increment(1)
-    });
-
-    console.log('JavaScript is loaded and executed.');
-});
 
     <!-- About section -->
     <section id="about" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
