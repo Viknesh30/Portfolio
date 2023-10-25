@@ -34,8 +34,10 @@
 </nav>
 
  <!-- Firebase Libraries -->
- <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
- <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+<script type="module">
+  // Import required classes from Firebase
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js';
+  import { getFirestore, collection, doc, getDoc, updateDoc, increment } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js';
 
  <!-- Firebase Initialization and Document Listener -->
  <script>
@@ -50,30 +52,30 @@
          measurementId: "G-L74P4RRXRH"
      };
 
-     // Initialize Firebase
-     firebase.initializeApp(firebaseConfig);
-     const db = firebase.firestore();
+      const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-     document.addEventListener("DOMContentLoaded", function() {
-         const email = '1305gviknesh@gmail.com';
-         const emailLink = document.querySelector('#email-link');
-         emailLink.href = 'mailto:' + email;
+  document.addEventListener("DOMContentLoaded", async function() {
+      const email = '1305gviknesh@gmail.com';
+      const emailLink = document.querySelector('#email-link');
+      emailLink.href = 'mailto:' + email;
 
-         const counterElement = document.getElementById("viewCounter");
-         db.collection("views").doc("counter").get().then((doc) => {
-             if (doc.exists) {
-                 const currentCount = doc.data().count;
-                 counterElement.textContent = `Views: ${currentCount}`;
-             }
-         });
+      const counterElement = document.getElementById("viewCounter");
+      
+      const counterDoc = doc(db, "views", "counter");
+      const docSnap = await getDoc(counterDoc);
+      if (docSnap.exists()) {
+          const currentCount = docSnap.data().count;
+          counterElement.textContent = `Views: ${currentCount}`;
+      }
 
-         db.collection("views").doc("counter").update({
-             count: firebase.firestore.FieldValue.increment(1)
-         });
+      await updateDoc(counterDoc, {
+          count: increment(1)
+      });
 
-         console.log('JavaScript is loaded and executed.');
-     });
- </script>
+      console.log('JavaScript is loaded and executed.');
+  });
+</script>
 
     <!-- About section -->
     <section id="about" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
