@@ -33,7 +33,47 @@
     </div>
 </nav>
 
+ <!-- Firebase Libraries -->
+ <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
 
+ <!-- Firebase Initialization and Document Listener -->
+ <script>
+     // Firebase configuration
+     const firebaseConfig = {
+         apiKey: "AIzaSyD4RalC07pm6m3vKlYr7d1XLeTaiv1BkJs",
+         authDomain: "portfolio-fc68d.firebaseapp.com",
+         projectId: "portfolio-fc68d",
+         storageBucket: "portfolio-fc68d.appspot.com",
+         messagingSenderId: "1050247214709",
+         appId: "1:1050247214709:web:96fc4bd730c3a8aabcea3c",
+         measurementId: "G-L74P4RRXRH"
+     };
+
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     const db = firebase.firestore();
+
+     document.addEventListener("DOMContentLoaded", function() {
+         const email = '1305gviknesh@gmail.com';
+         const emailLink = document.querySelector('#email-link');
+         emailLink.href = 'mailto:' + email;
+
+         const counterElement = document.getElementById("viewCounter");
+         db.collection("views").doc("counter").get().then((doc) => {
+             if (doc.exists) {
+                 const currentCount = doc.data().count;
+                 counterElement.textContent = `Views: ${currentCount}`;
+             }
+         });
+
+         db.collection("views").doc("counter").update({
+             count: firebase.firestore.FieldValue.increment(1)
+         });
+
+         console.log('JavaScript is loaded and executed.');
+     });
+ </script>
 
     <!-- About section -->
     <section id="about" class="bg-gray-100 max-w-5xl mx-auto px-6 py-12 rounded-lg animate__animated animate__fadeIn">
