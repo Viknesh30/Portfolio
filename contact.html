@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="Css/style.css">
 </head>
-<body class="bg-gray-100">
 
+<body class="bg-gray-100">
     <!-- Header -->
     <header class="bg-yellow-600 py-4 flex items-center justify-center">
         <div class="container mx-auto flex items-center justify-center">
@@ -43,14 +44,7 @@
 
     <!-- Firebase Initialization and Document Listener -->
     <script>
-        // Firebase configuration
-        // ... [same as you provided]
-
-        // Initialize Firebase
-        // ... [same as you provided]
-
-        // DOMContentLoaded event listener
-        // ... [same as you provided]
+        // Your Firebase configuration and initialization code goes here
     </script>
 
     <!-- Main Content -->
@@ -63,17 +57,31 @@
         </section>
     </main>
 
-    <!-- Additional JavaScript -->
-    <script src="Javascript/"></script>
+    <!-- Remember to replace with the correct file name -->
+    <script src="Javascript/main.js"></script>
+
     <script>
-        // Function to close the lightbox when the back button is clicked
         function closeLightbox() {
-            document.querySelector('.lightbox-overlay').style.display = 'none';
+            const overlay = document.querySelector('.lightbox-overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+            }
         }
 
-        // Event listeners for lightbox
-        document.querySelector('.lightbox-back-button').addEventListener('click', closeLightbox);
-        document.querySelector('.lightbox-overlay').addEventListener('click', closeLightbox);
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.lightbox-back-button');
+            const overlay = document.querySelector('.lightbox-overlay');
+
+            if (backButton) {
+                backButton.addEventListener('click', closeLightbox);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', closeLightbox);
+            }
+        });
     </script>
 </body>
+
 </html>
+
