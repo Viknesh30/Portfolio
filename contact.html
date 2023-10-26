@@ -39,23 +39,26 @@
     </nav>
 
     <!-- Firebase Libraries -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+<!-- Firebase Libraries (Version 8) -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 
     <!-- Firebase Initialization -->
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyD4RalC07pm6m3vKlYr7d1XLeTaiv1BkJs",
+ <script>
+    // Your Firebase configuration code here
+ // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD4RalC07pm6m3vKlYr7d1XLeTaiv1BkJs",
   authDomain: "portfolio-fc68d.firebaseapp.com",
   projectId: "portfolio-fc68d",
   storageBucket: "portfolio-fc68d.appspot.com",
   messagingSenderId: "1050247214709",
   appId: "1:1050247214709:web:96fc4bd730c3a8aabcea3c",
   measurementId: "G-L74P4RRXRH"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
+};
+
+firebase.initializeApp(firebaseConfig);
+</script>
 
     <!-- Main Content -->
     <main class="container mx-auto p-6 mt-6 bg-white shadow-md rounded-lg">
