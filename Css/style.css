@@ -4,17 +4,6 @@ html, body, h1, h2, p {
     padding: 0;
 }
 
-/* CSS for section headings */
-.section-heading {
-    margin-bottom: 20px; /* Add margin at the bottom of each section heading */
-}
-
-/* CSS for section paragraphs */
-.section-content {
-    margin-bottom: 30px; /* Add margin at the bottom of each section content */
-}
-
-
 /* Body styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -24,23 +13,12 @@ body {
     background-repeat: no-repeat;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
+/* Animation Styles */
 .animate__animated.animate__fadeIn {
-    animation-duration: 1s; /* Customize animation duration */
-    animation-delay: 0.5s; /* Customize animation delay */
-}
-
-/* CSS for section headings */
-.section-heading {
-    margin-bottom: 20px; /* Add margin at the bottom of each section heading */
-}
-
-/* CSS for section paragraphs */
-.section-content {
-    margin-bottom: 30px; /* Add margin at the bottom of each section content */
+    animation-duration: 1s;
+    animation-delay: 0.5s;
 }
 
 /* Header styles */
@@ -81,7 +59,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #082097; /* Change to your desired hover color */
+    color: #082097;
 }
 
 /* About section styles */
@@ -118,19 +96,50 @@ a.facebook-link,
 span.email-icon {
     display: inline-block;
     margin-right: 20px;
-    color: #01167d; /* Change to your desired icon color */
+    color: #01167d;
     font-size: 1.5rem;
     text-decoration: none;
 }
 
-/* ... Your previous styles ... */
-
-/* Center the description text */
+/* Description text centering */
 section p {
     text-align: center;
     font-size: 1.1rem;
-    margin: 0 auto; /* Center horizontally */
-    max-width: 80%; /* Limit the width to prevent it from extending */
+    margin: 0 auto;
+    max-width: 80%;
 }
 
-/* ... Your previous styles ... */
+/* Common section styles */
+.section-heading,
+.section-content {
+    margin-bottom: 20px;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    nav li {
+        display: block; /* stack menu items vertically for tablets */
+        margin-bottom: 10px; /* add spacing between menu items */
+    }
+
+    #about {
+        padding: 20px; /* reduce padding for smaller screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* reduce font size for mobile */
+    }
+
+    nav li {
+        display: block; /* stack menu items vertically for phones */
+        margin-bottom: 10px; /* add spacing between menu items */
+    }
+
+    #about {
+        padding: 10px; /* reduce padding even more for smaller screens */
+    }
+}
+
