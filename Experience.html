@@ -15,30 +15,106 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- Internal Styling -->
+    <style>
+        /* Main styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .milestone-container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .milestone-date {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .milestone-content {
+            margin-top: 20px;
+        }
+
+        .discovery {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li strong {
+            color: #f57c00;  /* Orange color */
+        }
+
+        /* Hover effect */
+        li:hover {
+            background-color: #fafafa;
+        }
+
+        /* Icons and Images */
+        .discovery:before {
+            content: "\1F310";  /* Globe icon */
+            margin-right: 10px;
+            font-size: 26px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .milestone-container {
+                width: 95%;
+            }
+        }
+    </style>
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="Css/style.css">
 </head>
 
 <body class="bg-gray-100">
     <!-- Header -->
-    <header class="bg-yellow-600 py-4">
-        <div class="container mx-auto flex items-center justify-between">
-
-            <img src="Images/output-onlinegiftools (2).gif" alt="Flaticon Icon" style="width: 50px; height: 50px; display: inline-block; vertical-align: middle;">
+    <header class="bg-yellow-600 py-4 flex items-center justify-center">
+        <div class="container mx-auto flex items-center justify-center">
+            <img src="Images/virtual-lab-unscreen.gif" alt="Flaticon Icon" style="width: 50px; height: 50px; display: inline-block; vertical-align: middle;">
             <h1 class="text-3xl font-semibold text-white inline-block align-middle">Experience</h1>
-            <nav class="animate__animated animate__fadeIn">
-                <div class="container mx-auto">
-                    <ul class="flex justify-center">
-                
-                    <li><a href="index.html">About Me</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="certificate.html">Certifications</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
+
+    <!-- Navigation bar -->
+    <nav class="animate__animated animate__fadeIn">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li class="mx-4"><a href="Experience.html" class="hover:text-blue-500 font-bold">Experience</a></li>
+            <li><a href="certificate.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Main Content -->
     <div class="milestone-container">
@@ -46,27 +122,29 @@
         <div class="milestone-row milestone">
             <div class="milestone-date">March 2023 to September 2023</div>
             <div class="milestone-content">
-                <div class="discovery">OTC Training Centre Sdn Bhd</div>
+                <h3 class="discovery">OTC Training Centre Sdn Bhd</h3>
                 <div class="scientist">
                     <ul>
-                    <li>-Proficiency in developing and customizing WordPress websites.</li>
-                    <li>-Familiarity with HTML, CSS, and basic JavaScript for website customization.</li>
-                    <li>-Knowledge of plugins and themes to enhance website functionality.</li>
-                    <li>-Integrate a CDN to optimize the delivery of static assets like images and  CSS for improved website performance.</li>
-                    <li>-Optimize images and other media files for faster loading times.</li>
-                    <li>-Implement lazy loading and content caching strategies.</li>
-                    <li>-Identify and resolve network-related issues affecting website performance or accessibility.</li>
-                    <li>-Assisted in the creation and optimization of content for the company website, employing SEO techniques to improve organic search rankings.</li>
-                    <li>-Contributed to the design, development, and maintenance of WordPress-based websites, ensuring responsive design and optimal user experience.</li>
-                    <li>-Monitored and analyzed website performance using tools like Google Analytics.</li>
-                    <li>-Utilized social media platforms to promote website content and expand the company's online presence.</li>
+                        <li><strong>WordPress Mastery:</strong> Developed and customized diverse WordPress websites to meet client-specific requirements.</li>
+                        <li><strong>Web Tech Stack Expertise:</strong> Proficient with HTML, CSS, and basic JavaScript ensuring seamless website customization.</li>
+                        <li><strong>Plugin & Theme Utilization:</strong> Leveraged a variety of plugins and themes to amplify website functionality.</li>
+                        <li><strong>Performance Optimization:</strong> Integrated CDNs for swift delivery of static assets and optimized images & other media for rapid load times.</li>
+                        <li><strong>Advanced Loading Techniques:</strong> Implemented lazy loading and content caching to further enhance user experience.</li>
+                        <li><strong>Network Troubleshooting:</strong> Proactively identified and rectified network-related issues impacting website performance or accessibility.</li>
+                        <li><strong>SEO & Content Strategy:</strong> Assisted in crafting and refining website content with a focus on SEO to boost organic search rankings.</li>
+                        <li><strong>Continuous Improvement:</strong> Played a pivotal role in the design, development, and upkeep of WordPress websites, ensuring they are responsive and user-centric.</li>
+                        <li><strong>Data-Driven Decisions:</strong> Relied on tools like Google Analytics to monitor and glean insights from website performance.</li>
+                        <li><strong>Social Media Engagement:</strong> Utilized various social media platforms to amplify website content and broaden the company's digital footprint.</li>
                     </ul>
-                    </div>                    
-                    
+                </div>                    
             </div>
         </div>
+    </div>
 
- 
+    <footer class="bg-yellow-600 text-white max-w-5xl mx-auto px-6 py-8 rounded-lg animate__animated animate__fadeIn flex flex-col items-center justify-center">
+        <p class="text-gray-100">&copy; 2023 Viknesh Subramaniam</p>
+        <p class="text-gray-100">Contact: <a href="mailto:1305gviknesh@gmail.com" class="underline">1305gviknesh@gmail.com</a></p>
+    </footer>
 
     <script>
         // Wait for the document to fully load
@@ -82,5 +160,5 @@
         });
     </script>
 </body>
-
 </html>
+
