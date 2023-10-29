@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="Images/LOGO.svg">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-yellow-600 py-4">
+        <div class="container mx-auto flex items-center justify-between">
+
+            <img src="Images/output-onlinegiftools (2).gif" alt="Flaticon Icon" style="width: 50px; height: 50px; display: inline-block; vertical-align: middle;">
+            <h1 class="text-3xl font-semibold text-white inline-block align-middle">Experience</h1>
+            <nav class="animate__animated animate__fadeIn">
+                <div class="container mx-auto">
+                    <ul class="flex justify-center">
+                
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certificate.html">Certifications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="milestone-container">
+        <!-- Milestone Row 1 -->
+        <div class="milestone-row milestone">
+            <div class="milestone-date">March 2023 to September 2023</div>
+            <div class="milestone-content">
+                <div class="discovery">OTC Training Centre Sdn Bhd</div>
+                <div class="scientist">
+                    <ul>
+                    <li>-Proficiency in developing and customizing WordPress websites.</li>
+                    <li>-Familiarity with HTML, CSS, and basic JavaScript for website customization.</li>
+                    <li>-Knowledge of plugins and themes to enhance website functionality.</li>
+                    <li>-Integrate a CDN to optimize the delivery of static assets like images and  CSS for improved website performance.</li>
+                    <li>-Optimize images and other media files for faster loading times.</li>
+                    <li>-Implement lazy loading and content caching strategies.</li>
+                    <li>-Identify and resolve network-related issues affecting website performance or accessibility.</li>
+                    <li>-Assisted in the creation and optimization of content for the company website, employing SEO techniques to improve organic search rankings.</li>
+                    <li>-Contributed to the design, development, and maintenance of WordPress-based websites, ensuring responsive design and optimal user experience.</li>
+                    <li>-Monitored and analyzed website performance using tools like Google Analytics.</li>
+                    <li>-Utilized social media platforms to promote website content and expand the company's online presence.</li>
+                    </ul>
+                    </div>                    
+                    
+            </div>
+        </div>
+
+ 
+
+    <script>
+        // Wait for the document to fully load
+        document.addEventListener("DOMContentLoaded", function () {
+            anime({
+                targets: '.milestone',  // targeting the class of the milestones
+                opacity: [0, 1],        // starting from 0 (invisible) and ending at 1 (fully visible)
+                translateY: [-50, 0],   // moving vertically from -50px to its original position
+                delay: anime.stagger(200), // 200ms delay between each milestone's animation
+                duration: 800,          // duration of the animation
+                easing: 'easeOutQuad'   // easing function for smoother animation
+            });
+        });
+    </script>
+</body>
+
+</html>
